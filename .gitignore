@@ -1,0 +1,21 @@
+# Environment & secrets
+.env
+credentials.json
+token.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Database & vector store
+meeting_ai.db
+chroma_db/
+
+# Uploaded / recorded audio
+uploaded_meetings/
+live_meeting_*.wav
+
+# OS
+.DS_Store

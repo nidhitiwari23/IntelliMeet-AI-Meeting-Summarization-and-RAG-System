@@ -1,0 +1,44 @@
+# ===== Core LLM & Orchestration (FREE) =====
+langchain==0.3.7
+langgraph==0.2.45
+langchain-groq==0.2.1          # Groq = FREE fast LLM API (llama3-70b, mixtral)
+groq==0.13.0
+
+# ===== Speech-to-Text & Speaker ID (FREE, runs locally) =====
+openai-whisper==20231117        # local Whisper transcription, no API cost
+pyannote.audio==3.3.2            # speaker diarization (free with HuggingFace token)
+torch==2.5.1
+torchaudio==2.5.1
+
+# ===== Vector DB / RAG (FREE, local) =====
+chromadb==0.5.20
+sentence-transformers==3.3.1     # free local embeddings (no OpenAI key needed)
+
+# ===== Backend / API =====
+fastapi==0.115.5
+uvicorn==0.32.1
+python-multipart==0.0.19
+pydantic==2.10.3
+
+# ===== Database (FREE, file based) =====
+sqlalchemy==2.0.36
+
+# ===== Frontend =====
+streamlit==1.40.2
+
+# ===== Google Calendar & Gmail (FREE tier) =====
+google-api-python-client==2.154.0
+google-auth-httplib2==0.2.0
+google-auth-oauthlib==1.2.1
+
+# ===== Slack (FREE incoming webhooks) =====
+requests==2.32.3
+
+# ===== Audio capture for LIVE meetings (FREE) =====
+sounddevice==0.5.1
+soundfile==0.12.1
+numpy==1.26.4
+
+# ===== Utilities =====
+python-dotenv==1.0.1
+pydub==0.25.1
