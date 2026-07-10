@@ -9,27 +9,8 @@
 [![Whisper](https://img.shields.io/badge/Speech--to--Text-Whisper-black?logo=openai&logoColor=white)](https://github.com/openai/whisper)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
-[![License](https://img.shields.io/badge/Cost-100%25%20Free-success)]()
 
 </div>
-
----
-
-## 📖 Table of Contents
-
-- [Overview](#-overview)
-- [The Problem](#-the-problem)
-- [Proposed Solution](#-proposed-solution)
-- [High-Level System Design](#-high-level-system-design)
-- [Multi-Agent Architecture](#-multi-agent-architecture)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Quick Start](#-quick-start)
-- [Two Ways To Use It](#-two-ways-to-use-it)
-- [Full Documentation](#-full-documentation)
-- [Roadmap](#-roadmap)
-- [License](#-license)
 
 ---
 
@@ -170,23 +151,6 @@ flowchart TD
 
     classDef agent fill:#EEF2FF,stroke:#4F46E5,stroke-width:2px,color:#1E1B4B
     class S1,S2,S3,S4,S5,S6 agent
-```
-
-> 💬 **A question you'll get in interviews:** *"Why not run these in parallel?"* — Summarizer, Decision, and Action-Item agents don't depend on each other's output, so they *could* fan out from a single node and merge before Task Assignment. This project runs them sequentially for simplicity/debuggability today; parallelizing them is a natural next optimization (see [Roadmap](#-roadmap)).
-
-Separately, a **RAG Agent** gives the system long-term memory:
-
-```mermaid
-flowchart LR
-    Q([❓ "What did Bob promise last month?"]) --> EMB[Embed Question]
-    EMB --> SEARCH[(ChromaDB<br/>Semantic Search)]
-    SEARCH --> CTX[Top-K Relevant<br/>Transcript Chunks]
-    CTX --> LLM[LLM answers<br/>using ONLY retrieved context]
-    LLM --> ANS([💬 Cited Answer])
-
-    style Q fill:#0EA5E9,color:#fff
-    style SEARCH fill:#16A34A,color:#fff
-    style ANS fill:#4F46E5,color:#fff
 ```
 
 ---
